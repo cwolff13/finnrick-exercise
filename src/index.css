@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@import "tailwindcss";
+
+/* Finnrick Brand Colors */
+:root {
+  --finnrick-badge-green: #0e8a4a;
+  --finnrick-badge-text: #ffffff;
+  --finnrick-card-bg: #efefef;
+  --finnrick-border-black: #000000;
+  --finnrick-border-light: #cccccc;
+  --finnrick-text-primary: #000000;
+  --finnrick-text-secondary: #666666;
+  --finnrick-icon-gray: #999999;
+}
