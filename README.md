@@ -44,9 +44,20 @@ TypeScript provides type safety. React component structure enables reuse. CSS va
 
 ### Effectiveness and Security
 
-**Current**: Prototype uses mock API with hardcoded data. No security measures implemented as this is frontend only demonstration.
+**Current Prototype**
 
-**Production Requirements**: Backend API must restrict access to registered domains, limit request rates, and validate rating IDs. Widget delivery requires secure connections and protection against malicious scripts.
+- Uses hardcoded mock data; no API calls.
+- Runs entirely client-side within this React demo app.
+- Exposes no secrets or credentials.
+- Demonstrates the widget’s rendering only.
+
+**Production**
+
+- Serve the widget via a loader script that injects an iframe (isolates styles/scripts).
+- Widget iframe fetches live rating data from a secured API (HTTPS + domain allowlist + rate limiting).
+- API validates `ratingId` and enforces authorization.
+- Loader script hosted on a CDN with integrity attributes to prevent tampering.
+- Optionally use signed tokens so third parties can only load ratings they’re allowed to display.
 
 ## Technology Choices
 
